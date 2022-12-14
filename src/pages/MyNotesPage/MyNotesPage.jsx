@@ -16,7 +16,6 @@ export default function MyNotesPage({ notes, setNotes, addNote }) {
     function handleSubmit(evt) {
         evt.preventDefault();
         addNote(noteInfo);
-        // setNotes(...notes, note);
     }
 
     return (
