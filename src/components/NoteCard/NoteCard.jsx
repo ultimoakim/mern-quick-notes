@@ -2,8 +2,8 @@ import * as userService from '../../utilities/users-service';
 
 export default function NoteCard({note}) {
     return(
-        
-            <h3>{note}</h3>
-        
+        <li>
+            <h3>{note.text}</h3>
+        </li>
     );
 }

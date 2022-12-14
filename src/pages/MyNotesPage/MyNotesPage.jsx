@@ -1,6 +1,6 @@
 import * as usersService from '../../utilities/users-service';
 import { checkToken } from "../../utilities/users-service";
-import  NoteCard  from "../../components/NoteCard/NoteCard";
+import NoteCard from "../../components/NoteCard/NoteCard";
 import { useState } from "react";
 
 export default function MyNotesPage({ notes, setNotes, addNote }) {
@@ -8,7 +8,6 @@ export default function MyNotesPage({ notes, setNotes, addNote }) {
     const [noteInfo, setNoteInfo] = useState({
         text: '',
     });
-
 
     function handleChange(evt) {
         setNoteInfo({ text: evt.target.value })
@@ -20,13 +19,12 @@ export default function MyNotesPage({ notes, setNotes, addNote }) {
         // setNotes(...notes, note);
     }
 
-
     return (
         <>
             {notes.length ?
                 <>
                     <h1>My Notes Page</h1>
-                    {/* {noteCards} */}
+                    <ul>{noteCards}</ul>
                     <label>Add Note!</label>
                     <form onSubmit={handleSubmit}>
                         <input
@@ -42,6 +40,7 @@ export default function MyNotesPage({ notes, setNotes, addNote }) {
                 </>
                 :
                 <>
+                    <h1>My Notes Page</h1>
                     <h3>No notes yet!</h3>
                     <label>Add Note!</label>
                     <form onSubmit={handleSubmit}>
